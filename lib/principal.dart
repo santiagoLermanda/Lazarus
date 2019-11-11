@@ -24,6 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 },),
                 ListTile(title: Text('Recomendados'), onTap: (){},),
+                ListTile(title: Text('Agregar Colegio'), onTap: (){},),
               ],
             )
           ],

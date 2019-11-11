@@ -11,7 +11,6 @@ class _PrivadasState extends State<Privadas> {
     return Scaffold(
       appBar: AppBar(title: Text('Privadas'),),
       body:
-          //[Image.asset('images/privada1.jpg',width: 600,height: 240, fit: BoxFit.cover,)
       ListView(children:  <Widget>[
 
         Container(

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "540150862791",
+    "firebase_url": "https://lazarus-10b6e.firebaseio.com",
+    "project_id": "lazarus-10b6e",
+    "storage_bucket": "lazarus-10b6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540150862791:android:686b48d12f53d6e4103fe2",
+        "android_client_info": {
+          "package_name": "ar.com.initdev.lazarus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540150862791-c63jp382kq4kmi7u60qa32i912mtjvjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHNOUUKUiZVv_WKx6gg5E5Xq-GTwb-sg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540150862791-c63jp382kq4kmi7u60qa32i912mtjvjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
