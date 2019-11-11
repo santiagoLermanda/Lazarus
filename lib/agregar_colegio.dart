@@ -26,10 +26,12 @@ class FormAC extends StatefulWidget {
 
 class _FormACState extends State<FormAC> with Validar {
   final _agregarColegioKey = GlobalKey<FormState>();
-  String tipo = '';
+  bool tipo = false;
   String nombre = '';
   String descripcion = '';
   String direccion = '';
+
+  String opcionSeleccionada;
 
   List<String> _tipos = ['Publica', 'Privada'];
   @override
@@ -41,7 +43,7 @@ class _FormACState extends State<FormAC> with Validar {
           TextFormField(
             keyboardType: TextInputType.text,
             decoration: const InputDecoration(
-              icon: Icon(Icons.shopping_basket),
+              icon: Icon(Icons.school),
               hintText: 'Ingrese el nombre del colegio',
               labelText: 'Nombre del Colegio',
               fillColor: Colors.red,
@@ -57,7 +59,7 @@ class _FormACState extends State<FormAC> with Validar {
           TextFormField(
             keyboardType: TextInputType.text,
             decoration: const InputDecoration(
-              icon: Icon(Icons.shopping_basket),
+              icon: Icon(Icons.description),
               hintText: 'Agrege una descripción',
               labelText: 'Descripcion',
               fillColor: Colors.red,
@@ -73,7 +75,7 @@ class _FormACState extends State<FormAC> with Validar {
           TextFormField(
             keyboardType: TextInputType.text,
             decoration: const InputDecoration(
-              icon: Icon(Icons.shopping_basket),
+              icon: Icon(Icons.location_on),
               hintText: 'Agrege una dirección',
               labelText: 'Direccion',
               fillColor: Colors.red,
@@ -83,33 +85,21 @@ class _FormACState extends State<FormAC> with Validar {
               direccion = value;
             },
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 15),
-            child: Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'Tipo: ',
-                    style: TextStyle(fontSize: 20),
+          CheckboxListTile(
+            onChanged: (f) {
+              setState(() {
+                tipo = !tipo;
+              });
+            },
+            value: tipo,
+            title: tipo
+                ? Text(
+                    'Privada',
+                  )
+                : Text(
+                    'Publica',
                   ),
-                ),
-                DropdownButton<String>(
-                  items: _tipos.map((String opcionMostrada) {
-                    return DropdownMenuItem<String>(
-                      value: opcionMostrada,
-                      child: Text(opcionMostrada),
-                    );
-                  }).toList(),
-                  onChanged: (opcionSeleccionada) {
-                    setState(() {
-                      tipo = opcionSeleccionada;
-                    });
-                  },
-                  value: tipo,
-                ),
-              ],
-            ),
+            subtitle: Text('Seleccionar para privada'),
           ),
           Padding(
             padding: EdgeInsets.only(top: 50),
