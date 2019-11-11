@@ -126,7 +126,7 @@ class _FormACState extends State<FormAC> with Validar {
                   };
 
                   http.post(
-                      'https://laspulgas-5d23c.firebaseio.com/articulos.json',
+                      'https://lazarus-10b6e.firebaseio.com/colegios.json',
                       body: json.encode(datos));
                 }
               },

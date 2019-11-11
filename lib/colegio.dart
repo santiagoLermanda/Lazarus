@@ -1,4 +1,5 @@
 class Colegio {
+  String id;
   String nombre;
   String tipo;
   String descripcion;
